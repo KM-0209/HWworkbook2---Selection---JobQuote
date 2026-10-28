@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// Prompts the user to enter job and outputs the jobs specific quote
 class Program
 {
+    // Links each inputted job to a specific quote and returns that quote
     static string JobQuote(string Job)
     {
+        // Returns quote besed on job
         if (Job == "Developer")
         {
-            return "Logical thinking, passion and perserverance is the paint on your palette.";
+            return "Logical thinking, passion and perserverance is the paint on your palette."; 
         }
         else if (Job == "Engineer")
         {
@@ -25,10 +28,12 @@ class Program
         }
     }
     
+    // The main entry point of the program
     static void Main(string[] args)
     {
         string Job;
 
+        // Allows user to input their job
         Console.Write("Enter your job: ");
         while (string.IsNullOrWhiteSpace(Job = Console.ReadLine()))
         {
